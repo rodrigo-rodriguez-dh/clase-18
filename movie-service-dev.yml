@@ -59,6 +59,3 @@ info:
     name: ${spring.application.name}
     version: 1.0.0
     description: Movie Microservice
-  svc:
-    intanceid: ${eureka.instance.instance-id}
-    port: ${server.port}
