@@ -57,6 +57,3 @@ info:
     name: ${spring.application.name}
     version: 1.0.0
     description: API Gateway
-  svc:
-    intanceid: ${eureka.instance.instance-id}
-    port: ${server.port}
