@@ -1,0 +1,19 @@
+server:
+  port: 9411
+
+eureka:
+    client:
+      region: default
+      registryFetchIntervalSeconds: 5
+      serviceUrl:
+        defaultZone: http://localhost:8761/eureka
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      password: 123456
+      name: zipkin-server
+      username: zipkinuser
