@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+  rabbitmq:
+    image: rabbitmq:3.7.2-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  eureka-service:
+    image: eureka-service
+    ports:
+      - "8761:8761"
+    restart: always
+  config-service:
+    image: config-service
+    ports:
+      - "8888:8888"
+    restart: always
+  movie-service:
+    image: movie-service
+    ports:
+      - "8082:8082"
+    restart: always
+  catalog-service:
+    image: catalog-service
+    ports:
+      - "8084:8084"
+    restart: always
+  api-gateway:
+    image: api-gateway
+    ports:
+      - "8080:8080"
+    restart: always
